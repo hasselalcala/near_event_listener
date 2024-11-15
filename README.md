@@ -151,6 +151,10 @@ pub enum ListenerError {
 }
 ```
 
+## Near Event Listener Client
+
+[Near Event Listener Client](https://github.com/hasselalcala/near_event_listener_client)
+
 ## Acknowledgements
 
 This implementation was built for the NEAR Protocol ecosystem to facilitate event monitoring and real-time updates for decentralized applications.
