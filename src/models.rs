@@ -6,5 +6,5 @@ pub struct EventLog {
     pub standard: String,
     pub version: String,
     pub event: String,
-    pub data: Value, // Ahora data es un Value genérico que puede contener cualquier JSON
+    pub data: Value,
 }
