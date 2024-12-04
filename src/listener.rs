@@ -113,7 +113,8 @@ impl NearEventListener {
                         //         callback(event_log);
                         //     }
                         // }
-
+                        println!("Logs: {:?}", logs);
+                        println!("Logs length: {}", logs.len());
                         for log in logs {
                             if let Ok(event_log) = Self::process_log(&log) {
                                 println!("\nEmitted event: {:?}\n", event_log);
