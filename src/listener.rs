@@ -115,12 +115,12 @@ impl NearEventListener {
                         // }
                         println!("Logs: {:?}", logs);
                         println!("Logs length: {}", logs.len());
-                        //for log in logs {
+                        for log in logs {
                             if let Ok(event_log) = Self::process_log(&log) {
                                 println!("\nEmitted event: {:?}\n", event_log);
                                 callback(event_log);
                             }
-                        //}
+                        }
                     }
 
                     self.last_processed_block = block.header.height;
@@ -253,7 +253,7 @@ impl NearEventListener {
         let json_str = &log["EVENT_JSON:".len()..];
 
         let event_log: EventLog = serde_json::from_str(json_str).map_err(|e| {
-            println!("Error deserializing JSON: {}", e);
+            println!("Error deserializing JSO here: {}", e);
             ListenerError::JsonError(e)
         })?;
 
