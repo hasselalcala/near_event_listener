@@ -253,7 +253,7 @@ impl NearEventListener {
         let json_str = &log["EVENT_JSON:".len()..];
 
         let event_log: EventLog = serde_json::from_str(json_str).map_err(|e| {
-            println!("Error deserializing JSO here: {}", e);
+            println!("Error deserializing JSON: {}", e);
             ListenerError::JsonError(e)
         })?;
 
