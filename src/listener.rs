@@ -115,12 +115,12 @@ impl NearEventListener {
                         // }
                         println!("Logs: {:?}", logs);
                         println!("Logs length: {}", logs.len());
-                        for log in logs {
+                        //for log in logs {
                             if let Ok(event_log) = Self::process_log(&log) {
                                 println!("\nEmitted event: {:?}\n", event_log);
                                 callback(event_log);
                             }
-                        }
+                        //}
                     }
 
                     self.last_processed_block = block.header.height;
