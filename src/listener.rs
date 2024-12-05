@@ -106,13 +106,7 @@ impl NearEventListener {
                         self.find_transaction_in_block(&block).await?
                     {
                         let logs = self.get_logs(&tx_hash, &sender_account_id).await?;
-
-                        // if let Some(log) = logs.first() {
-                        //     if let Ok(event_log) = Self::process_log(log) {
-                        //         println!("\nEmitted event: {:?}\n", event_log);
-                        //         callback(event_log);
-                        //     }
-                        // }
+                        
                         println!("Logs: {:?}", logs);
                         println!("Logs length: {}", logs.len());
                         for log in logs {
